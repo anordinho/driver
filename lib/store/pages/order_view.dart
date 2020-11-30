@@ -1,4 +1,4 @@
-import 'package:Driver_ios/model/order.dart';
+import 'package:Driver_ios/model/order';
 import 'package:Driver_ios/store/cards/product_card.dart';
 import 'package:Driver_ios/pages/welcome_page.dart';
 import 'package:flutter/material.dart';

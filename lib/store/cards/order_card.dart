@@ -1,5 +1,5 @@
 
-import 'package:Driver_ios/model/order.dart';
+import 'package:Driver_ios/model/order';
 import 'package:flutter/material.dart';
 
 class OrderCard extends StatelessWidget {

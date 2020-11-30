@@ -1,4 +1,4 @@
-import 'package:Driver_ios/model/order.dart';
+import 'package:Driver_ios/model/order';
 import 'package:flutter/material.dart';
 
 class ProductCard extends StatelessWidget {
@@ -26,11 +26,11 @@ class ProductCard extends StatelessWidget {
       ),
     ],
               ),
-              child: Image.asset(orders.image),
+              child: Image.asset('assets/images/p1.png'),
           ),
         ),
-        Text(orders.product,style: TextStyle(color: Colors.grey[850],fontSize: 20),),
-        Text(orders.price,style: TextStyle(color: Colors.green),)
+        Text(orders.name,style: TextStyle(color: Colors.grey[850],fontSize: 20),),
+        Text('500 Tsh',style: TextStyle(color: Colors.green),)
       ],
     );
   }

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+
 
 class Order {
+  final int id;
   final String name;
   final String date;
   final String product;
@@ -8,41 +11,27 @@ class Order {
   final String status;
   final String image;
 
-
   Order(
-      {@required this.name,
+      {@required this.id,
+        @required this.name,
         @required this.date,
         @required this.price,
         @required this.status,
         @required this.product,
-        @required this.image
+        @required this.image,
+      
       });
+static final DateFormat formatter = DateFormat('yyyy-MM-dd');
+
+   Order.fromMap(Map<String, dynamic> map) : assert(map['id'] != null),
+   id = map['id'],
+   name = map['name'],
+   product = map['product_name'],
+   price = map['price'],
+   date = formatter.format(DateTime.parse(map['date'])),
+   status = map['payment_status'],
+   image = map['image'];
+
+ 
+
 }
-
-List<Order> orders = [
-  Order(
-      name: "Davis",
-      date: '2020-11-23 11:35:00',
-      price: '2700 Tsh',
-      status: " status: Pending", 
-      product: 'Iphone 6 Plus',
-       image: 'assets/images/p1.png'
-  ),
-  Order(
-      name: "Arnold",
-      date: '2020-11-23 11:35:00',
-      price: '650 Tsh',
-      status: "status: paid",
-      product: 'Bag',
-      image: 'assets/images/p2.png'
-  ),
-    Order(
-      name: "Johnson",
-      date: '2020-11-23 11:35:00',
-      price: '850 Tsh',
-      status: "status: paid",
-      product: 'Horse Scupture',
-      image: 'assets/images/p3.png'
-  ),
-
-];

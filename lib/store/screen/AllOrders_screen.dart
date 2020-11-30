@@ -1,5 +1,5 @@
 
-import 'package:Driver_ios/model/order.dart';
+import 'package:Driver_ios/model/order';
 import 'package:Driver_ios/store/cards/order_card.dart';
 import 'package:Driver_ios/store/pages/order_view.dart';
 

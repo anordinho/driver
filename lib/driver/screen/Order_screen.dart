@@ -1,7 +1,7 @@
 
 import 'package:Driver_ios/driver/cards/order_card.dart';
 import 'package:Driver_ios/driver/pages/order_view.dart';
-import 'package:Driver_ios/model/order.dart';
+import 'package:Driver_ios/model/order';
 import 'package:flutter/material.dart';
 
 class OrderScreen extends StatelessWidget {
